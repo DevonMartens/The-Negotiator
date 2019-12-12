@@ -4,21 +4,21 @@ module.exports = (sequelize, DataTypes) => {
             type : DataTypes.INTEGER, 
             allowNull: false, 
             validate : {
-                len : [1, 2]
+                len : [1]
             }
         },
         businessOpen_years : {
             type : DataTypes.INTEGER, 
             allowNull: false, 
             validate : {
-                len : [1, 2]
+                len : [1]
             }
         }, 
         additional_addresses: {
             type : DataTypes.STRING, 
-            allowNull: false, 
+            allowNull: true, 
             validate : {
-                len : [1, 50]
+                len : [1]
             }
         }, 
         previous_insuranceName : {
@@ -91,7 +91,7 @@ module.exports = (sequelize, DataTypes) => {
             }
         }, 
         miles_driven : {
-            type : DataTypes.INTEGER, 
+            type : DataTypes.STRING, 
             allowNull: false, 
             validate : {
                 len : [1]

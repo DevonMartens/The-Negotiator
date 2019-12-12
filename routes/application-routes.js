@@ -1,11 +1,12 @@
 var db = require("../models");
-
+var express = require("express");
+// var app = express.Router();
 module.exports = app => {
-    app.get("/api/applications", (req, res) => {
+    app.get("/api/applications/:dealer", (req, res) => {
         var query = {};
-        if (req.query.dealer_id) {
-            query.dealerId = req.query.dealer_id;
-        }
+        // if (req.query.dealer_id) {
+        //     query.dealerId = req.query.dealer_id;
+        // }
         db.Application.findAll({
             where: query,
             include: [db.dealer]
@@ -14,18 +15,17 @@ module.exports = app => {
         });
     });
 
-    app.get("/api/applications/:id", (req, res) => {
+    app.get("/api/viewApp/:id", (req,res) => {
         db.Application.findOne({
-            where: {
-                id: req.params.id
-            },
-            include: [db.dealer]
-        }).then(dbApplication => {
-            res.json(dbApplication)
-        })
+            where : {
+                id : req.params.id
+            }, include : [db.dealer]
+        }).then (dbdealer => {
+            res.json(dbdealer);
+        });
     });
     
-    app.post("/api/applications", (req,res) => {
+    app.post("/api/applications/:dealer", (req,res) => {
         db.Application.create(req.body, {
             dealerId: req.body.dealer_id
         }).then(dbApplication => {

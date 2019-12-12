@@ -1,8 +1,9 @@
 var db = require("../models");
+var express = require("express")
+// var router = require(express.Router())
+module.exports = router => {
 
-module.exports = app => {
-
-    app.get("/api/contact", (req,res) => {
+    router.get("/api/contact", (req,res) => {
         db.dealer.findAll({
             include : [db.Application, db.User]
         }).then (dbdealer => {
@@ -10,7 +11,7 @@ module.exports = app => {
         });
     });
 
-    app.get("/api/contact/:id", (req,res) => {
+    router.get("/api/contact/:id", (req,res) => {
         db.dealer.findOne({
             where : {
                 id : req.params.id
@@ -20,7 +21,7 @@ module.exports = app => {
         });
     });
 
-    app.post("/api/contact", (req, res) => {
+    router.post("/api/contact", (req, res) => {
         console.log(req.body)
         db.dealer.create(req.body).then(dbdealer => {
             console.log(dbdealer)
@@ -28,7 +29,7 @@ module.exports = app => {
         });
     });
 
-    app.put("/api/contact/:id", (req, res)=> {
+    router.put("/api/contact/:id", (req, res)=> {
         db.dealer.update(req.body, {
             where: {
                 id: req.params.id
@@ -38,7 +39,7 @@ module.exports = app => {
         });
     });
 
-    app.delete("/api/contact/:id", (req,res) => {
+    router.delete("/api/contact/:id", (req,res) => {
         db.dealer.destroy({
             where: {
                 id: req.params.id

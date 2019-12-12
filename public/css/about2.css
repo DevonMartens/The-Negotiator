@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: 'Roboto', sans-serif;
     background-color: rgb(199, 184, 164);
@@ -50,7 +54,50 @@ body {
 }
 .jumbotron {
     margin-top: 50px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.603)), url(../img/people8_TOPCROP-2.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.692)), url(../assets/images/people8_TOPCROP-2.png);
     background-position: center;
     background-size: cover;
+    font-family: 'Gelasio', serif;
+}
+.title {
+    color: rgb(245, 245, 245);
+    font-size: 36px;
+
+}
+.lead {
+    color: rgb(235, 235, 235);
+    font-size: 14px;
+}
+.col-sm-5 {
+    background-color: burlywood;
+}
+.col-lg-7 {
+    background-color: cornflowerblue;
+}
+.info {
+    background-color: cornsilk;
+}
+.wrapper {
+    position: absolute;
+    top: 10%;
+    right: 50%;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    float: right;
+}
+.wrapper .input {
+    width: 180px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.search-btn {
+    background: #d3af61;
+    width: fit-content;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 10px;
 }

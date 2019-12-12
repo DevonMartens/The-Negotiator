@@ -1,12 +1,9 @@
 $(document).ready(function(event) {
 
   var url = window.location.search;
-console.log(url)
-console.log(window.location.href)
 
 if (url.indexOf("?id=") !== -1) {
   id = url.split("=")[1];
-  console.log(id)
   getid(id);
 }
 });
@@ -29,7 +26,6 @@ $.get("/api/contact/" + id, data =>  {
 
    })
   }
- 
 
 // Applications: []
 // User: null
