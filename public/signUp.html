@@ -1,45 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Passport Authentication</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./assets/style.css">  
+      <!-- JQuery ajax-->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <title>Welcome page test1</title>
 </head>
 
-<body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-      </div>
-    </div>
-  </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Login Form</h2>
-        <form class="login">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
-          </div>
-          <button type="submit" class="btn btn-default">Login</button>
-        </form>
-        <br />
-        <p>Or sign up <a href="/login">here</a></p>
-      </div>
+          <!-- nav bar -->
+          <header>
+              <div class="row">
+                <div id="logo">
+                  <img src="">
+                </div>
+                <ul class="main-nav">
+                  <li class="highlight"><a href="">HOME</a></li>
+                  <li><a href="">AGENT</a></li>
+                  <li><a href="">DEALERSHIP</a></li>
+                  <li><a href="about.html">ABOUT US</a></li>
+                </ul>
+              </div>
+            </header>
+            <body>
+       <!-- jumbotron-->
+       <div class="jumbotron bg-transparent jumbotron-fluid m-5">
+            <div class="container">
+                <div class="col d-flex justify-content-center">
+    <form action="/action_page.php">
+        <!-- email-->
+        <div class="form-group bg-transparent p-2">
+          <label class="text-warning" for="email">Email address:</label>
+          <input type="email" class="form-control" placeholder="Enter email" id="email">
+        </div>
+          <!-- password-->
+        <div class="form-group bg-transparent p-2">
+          <label for="pwd1" class="text-warning">Password:</label>
+          <input type="password" class="form-control" placeholder="Enter password" id="password1">
+        </div>
+        <!-- re-enter password-->
+        <div class="form-group bg-transparent p-2">
+                <label class="text-warning" for="pwd2"> Re-enter Password:</label>
+                <input type="password" class="form-control" placeholder="Enter password" id="password2">
+              </div>
+              <!-- checkbox-->
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="company" value="option1" checked>
+                  <label class="form-check-label text-warning" for="exampleRadios1">
+                    Agent/Dealer
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="client" value="option2">
+                  <label class="form-check-label text-warning" for="exampleRadios2">
+                    Client
+                  </label>
+                </div>
+        
+        <button type="submit" class="btn btn-transparent text-warning border-light" id="signUpSubmit">Submit</button>
+     <p id="p1" class="text-warning"></p>
+      </form>
+    </div> 
+</div>
+</div>
+<script text="text/javascript" scr="./assets/js/signUp.js"></script>
+    <!-- foooter -->
+    <div id="wrap">
+        ​
+    <div class="container">
+                  
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/signUp.js"></script>
-
+  <div id="footer m-3">
+    <div class="container">
+<p>&copy;2019 Devon Martens &copy;</p>
+    </div>
+  </div>     
 </body>
-
 </html>
+</body>

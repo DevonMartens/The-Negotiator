@@ -16,13 +16,16 @@ $(document).ready(function() {
        return;
      }
  
+        if (emailInput == "" || passwordInput == "") 
+   {
+    $("#p1").html("Error: form is missing a field")}
      // If we have an email and password we run the loginUser function and clear the form
      loginUser(userData.email, userData.password);
      emailInput.val("");
      passwordInput.val("");
-   });
+  
 
- 
+  });
    // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
    function loginUser(email, password) {
      $.post("/api/login", {

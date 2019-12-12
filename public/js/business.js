@@ -44,6 +44,9 @@ $(document).ready(function () {
         };
         userData(userTable, signUpInfo);
 
+        if (name == "" || address == "" || owner == "" || businessType == ""|| state== "" || email  == "" || zip== ""){
+        $("#p").html("Error: form is missing a field")}
+    
         function userData(userTable, signUpInfo) {
             $.post("/api/signup", userTable).then(data => {
             $.get("/api/user_data", alldata => {
